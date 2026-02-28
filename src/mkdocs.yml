@@ -1,4 +1,5 @@
-site_name: My Docs
+site_name: Learn Git
 nav:
-  - Home: index.md
+  - Prerequisites: index.md
+  - Introduction: pages/introduction.md
 theme: readthedocs
