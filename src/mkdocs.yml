@@ -1,5 +1,8 @@
 site_name: Learn Git
 nav:
-  - Prerequisites: index.md
-  - Introduction: pages/introduction.md
+  - Main:
+    - Prerequisites: index.md
+    - Introduction: pages/introduction.md
+  - Activities: 
+    - Activity 1 - Edit, Commit, Repeat: pages/activities/activity-1.md
 theme: readthedocs
