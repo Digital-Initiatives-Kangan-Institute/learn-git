@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Prerequisites - Learn Git</title>
+    <title>Git Cheatsheet - Learn Git</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Prerequisites";
+        var mkdocs_page_name = "Git Cheatsheet";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -41,13 +41,25 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Main</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Prerequisites</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Git Cheatsheet</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#what-do-i-need-to-know">What do I need to know?</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-git-branch">1. git branch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-git-switch">2. git switch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-git-add">3. git add</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-git-pull">4. git pull</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-git-push">5. git push</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-git-status">6. git status</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-git-restore">7. git restore</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-git-clone">8. git clone</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="pages/introduction/">Introduction</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Activities</span></p>
@@ -70,7 +82,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Main</li>
-      <li class="breadcrumb-item active">Prerequisites</li>
+      <li class="breadcrumb-item active">Git Cheatsheet</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -79,17 +91,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="prerequisites">Prerequisites</h1>
-<h2 id="what-do-i-need-to-know">What do I need to know?</h2>
-<p>You should have a basic understanding of the following concepts before reading:</p>
-<ul>
-<li>Shell/Terminal Commands</li>
-</ul>
+                <h1 id="git-cheatsheet">Git Cheatsheet</h1>
+<h3 id="1-git-branch"><strong>1. <code>git branch</code></strong></h3>
+<p><strong>Purpose:</strong> Lists all branches or creates a new branch.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># List all branches
+git branch
+
+# Create a new branch called 'feature-login'
+git branch feature-login
+</code></pre>
+<hr />
+<h3 id="2-git-switch"><strong>2. <code>git switch</code></strong></h3>
+<p><strong>Purpose:</strong> Switches to another branch.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Switch to an existing branch
+git switch main
+
+# Switch to a newly created branch
+git switch feature-login
+</code></pre>
+<hr />
+<h3 id="3-git-add"><strong>3. <code>git add</code></strong></h3>
+<p><strong>Purpose:</strong> Stages changes in your working directory for the next commit.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Stage a single file
+git add index.html
+
+# Stage all changes
+git add .
+</code></pre>
+<hr />
+<h3 id="4-git-pull"><strong>4. <code>git pull</code></strong></h3>
+<p><strong>Purpose:</strong> Fetches and merges changes from a remote repository into your current branch.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Pull changes from the remote 'main' branch
+git pull origin main
+</code></pre>
+<hr />
+<h3 id="5-git-push"><strong>5. <code>git push</code></strong></h3>
+<p><strong>Purpose:</strong> Sends your committed changes to a remote repository.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Push changes to the remote 'main' branch
+git push origin main
+</code></pre>
+<hr />
+<h3 id="6-git-status"><strong>6. <code>git status</code></strong></h3>
+<p><strong>Purpose:</strong> Shows the status of changes in your working directory and staging area.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Check which files are staged, modified, or untracked
+git status
+</code></pre>
+<hr />
+<h3 id="7-git-restore"><strong>7. <code>git restore</code></strong></h3>
+<p><strong>Purpose:</strong> Discards changes in the working directory or restores files from the staging area.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Discard changes in a single file
+git restore index.html
+
+# Unstage a file
+git restore --staged index.html
+</code></pre>
+<hr />
+<h3 id="8-git-clone"><strong>8. <code>git clone</code></strong></h3>
+<p><strong>Purpose:</strong> Creates a local copy of a remote repository.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Clone a repository from GitHub
+git clone https://github.com/username/repo.git
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="pages/introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="pages/activities/activity-1/" class="btn btn-neutral float-right" title="Activity 1 - Edit, Commit, Repeat">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -113,7 +187,7 @@
     
     
     
-      <span><a href="pages/introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="pages/activities/activity-1/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

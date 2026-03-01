@@ -7,5 +7,11 @@ Picture yourself coding and making changes throughout the day. To avoid losing e
 ![Before and after Git](img/git-before-after.png)
 Instead, you can use Git to save snapshots of your code as you work. This way, you only need to manage one set of files, and Git keeps track of all the different versions for you automatically.
 
+NOTE:
+Git isn’t the only version control system, there are plenty of others, each with their own purpose. But Git is the best one and the rest suck.
+
 ## Installing Git
+...
+
+## Git vs GitHub
 ...
