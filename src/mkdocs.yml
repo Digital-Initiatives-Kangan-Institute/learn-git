@@ -1,6 +1,7 @@
 site_name: Learn Git
 nav:
   - Main:
+    - Installing Git: pages/install-git.md
     - Git Cheatsheet: index.md
     - Branching Strategy: pages/branching-strategy.md
   - Activities: 
