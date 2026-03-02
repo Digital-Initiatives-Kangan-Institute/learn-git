@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Introduction - Learn Git</title>
+    <title>Installing Git - Learn Git</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduction";
-        var mkdocs_page_input_path = "pages/introduction.md";
+        var mkdocs_page_name = "Installing Git";
+        var mkdocs_page_input_path = "pages/install-git.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -40,8 +40,34 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Main</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../install-git/">Installing Git</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Installing Git</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-windows">1. 🪟 Windows</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#check-the-installation">Check the installation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-linux">2. 🐧 Linux</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#debian-ubuntu-apt">Debian / Ubuntu (APT)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fedora-rhel-dnf">Fedora / RHEL (DNF)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#arch-linux-manjaro-pacman">Arch Linux / Manjaro (Pacman)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#check-the-installation_1">Check the installation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-macos">3. 🍎 macOS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#check-the-installation_2">Check the installation</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Git Cheatsheet</a>
                   </li>
@@ -67,7 +93,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+          <li class="breadcrumb-item">Main</li>
+      <li class="breadcrumb-item active">Installing Git</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -76,16 +103,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="introduction">Introduction</h1>
-<h2 id="what-is-git">What is Git?</h2>
-<p><strong>Git</strong> is a <strong>version control system</strong> that helps you track changes to your code over time. It allows you to save snapshots of your work so you can return to an earlier version if needed. It also makes collaboration easier by organising and combining changes from different people.</p>
-<h2 id="installing-git">Installing Git</h2>
-<p>...</p>
-<h2 id="git-vs-github">Git vs GitHub</h2>
-<p>...</p>
+                <h1 id="installing-git">Installing Git</h1>
+<hr />
+<h2 id="1-windows">1. 🪟 Windows</h2>
+<ol>
+<li>Open your web browser.</li>
+<li>Go to the official Git website: <a href="https://git-scm.com">https://git-scm.com</a></li>
+<li>Click <strong>Download for Windows</strong>.</li>
+<li>Run the downloaded installer.</li>
+<li>Follow the installer steps and leave the default options selected.</li>
+<li>Click <strong>Install</strong>.</li>
+</ol>
+<h3 id="check-the-installation">Check the installation</h3>
+<p>Open <strong>Command Prompt</strong> or <strong>PowerShell</strong> and run:</p>
+<pre><code class="language-bash">git --version
+</code></pre>
+<p>If Git is installed correctly, it will display the installed version.</p>
+<hr />
+<h2 id="2-linux">2. 🐧 Linux</h2>
+<p>Git can be installed using your distribution’s <strong>package manager</strong>.</p>
+<h3 id="debian-ubuntu-apt">Debian / Ubuntu (APT)</h3>
+<pre><code class="language-bash">sudo apt update
+sudo apt install git
+</code></pre>
+<h3 id="fedora-rhel-dnf">Fedora / RHEL (DNF)</h3>
+<pre><code class="language-bash">sudo dnf install git
+</code></pre>
+<h3 id="arch-linux-manjaro-pacman">Arch Linux / Manjaro (Pacman)</h3>
+<pre><code class="language-bash">sudo pacman -S git
+</code></pre>
+<h3 id="check-the-installation_1">Check the installation</h3>
+<pre><code class="language-bash">git --version
+</code></pre>
+<hr />
+<h2 id="3-macos">3. 🍎 macOS</h2>
+<p>The easiest way is to install git is using <strong>Homebrew</strong>.</p>
+<ol>
+<li>Install Homebrew from the official website: <a href="https://brew.sh/">https://brew.sh/</a></li>
+<li>Run the following command in a terminal:</li>
+</ol>
+<pre><code class="language-bash">brew install git
+</code></pre>
+<h3 id="check-the-installation_2">Check the installation</h3>
+<pre><code class="language-bash">git --version
+</code></pre>
+<hr />
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-right" title="Git Cheatsheet">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -107,6 +175,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+    
+      <span><a href="../.." style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
