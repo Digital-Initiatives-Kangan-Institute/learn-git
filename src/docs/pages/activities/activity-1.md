@@ -3,7 +3,7 @@
 In this activity you will practice forking, cloning, branching, staging, committing, pushing and pull requests.
 
 ## 💡 Scenario
-You are a software developer hired by KangaCafe to update their website. KangaCafe has expressed that they do not like the orange color scheme and has asked you to try different color schemes to see what fits.
+You have been hired by KangaCafe as a software developer to update their website. They don’t like the current orange color scheme and want you to experiment with different color options to find one that works best.
 
 You must use `VSCode` with the `LivePreview` extension to view your changes to the website.
 
