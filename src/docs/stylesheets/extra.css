@@ -1,0 +1,18 @@
+.alert {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    color: white;
+    background-color: red;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+.alert.note {
+    background-color: blue;
+}
+
+.alert.warn {
+    background-color: orange;
+}
