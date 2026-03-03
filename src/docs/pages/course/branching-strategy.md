@@ -56,8 +56,6 @@ When working on a team or even solo, it’s helpful to organize your code with b
 4. **Test Dev branch**, then merge Dev into Staging for broader testing.
 5. **Test Staging**, then merge Staging into Master for release.
 
-![Branching Strategy Diagram](img/branching-strategy.png)
-
 ---
 
 ### **Benefits of This Strategy**
