@@ -1,9 +1,12 @@
 site_name: Learn Git
 nav:
-  - Main:
-    - Installing Git: pages/install-git.md
-    - Git Cheatsheet: index.md
-    - Branching Strategy: pages/branching-strategy.md
+  - Home:
+    - Introduction: index.md
+  - Course:
+    - Installing Git: pages/course/install-git.md
+    - Branching Strategy: pages/course/branching-strategy.md
+  - Quick Info:
+    - Git Cheatsheet: pages/quick-info/cheat-sheet.md
   - Activities: 
     - Activity 1 - Edit, Commit, Repeat: pages/activities/activity-1.md
 theme: readthedocs
