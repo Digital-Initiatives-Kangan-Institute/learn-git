@@ -12,5 +12,8 @@ nav:
 theme: readthedocs
 hooks:
   - hooks/note.py
+  - hooks/button.py
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascript/main.js

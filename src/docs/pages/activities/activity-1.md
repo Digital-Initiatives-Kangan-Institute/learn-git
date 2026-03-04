@@ -5,6 +5,8 @@ In this activity you will practice forking, cloning, branching, staging, committ
 ## 💡 Scenario
 You have been hired by KangaCafe as a software developer to update their website. They don’t like the current orange color scheme and want you to experiment with different color options to find one that works best.
 
+$Run Test:test();
+
 :::info
 - You must use `VSCode` with the `LivePreview` extension to view your changes to the website.
 - It is recommended to use the [cheat sheet](/pages/cheat-sheet) while doing this activity.
