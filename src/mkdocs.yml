@@ -9,6 +9,8 @@ nav:
     - Git Cheatsheet: pages/quick-info/cheat-sheet.md
   - Activities: 
     - Activity 1 - Edit, Commit, Repeat: pages/activities/activity-1.md
+  - Debug:
+    - Custom Controls: pages/debug/custom-controls.md
 theme: readthedocs
 hooks:
   - hooks/note.py
