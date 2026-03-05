@@ -5,6 +5,7 @@ nav:
   - Course:
     - Installing Git: pages/course/install-git.md
     - Branching Strategy: pages/course/branching-strategy.md
+    - Pull Requests: pages/course/pull-requests.md
   - Quick Info:
     - Git Cheatsheet: pages/quick-info/cheat-sheet.md
   - Activities: 

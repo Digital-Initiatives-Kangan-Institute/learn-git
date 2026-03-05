@@ -1,5 +1,2 @@
 # Introduction
-## What you will learn
-...
-
-Click `Next` to begin the course.
+This page is a work in progress, check back later..
