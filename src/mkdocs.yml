@@ -8,6 +8,7 @@ nav:
     - Pull Requests: pages/course/pull-requests.md
   - Quick Info:
     - Git Cheatsheet: pages/quick-info/cheat-sheet.md
+    - Live Preview: pages/quick-info/live-preview-extension.md
   - Activities: 
     - Activity 1 - Edit, Commit, Repeat: pages/activities/activity-1.md
   - Debug:
