@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Branching Strategy - Learn Git</title>
+    <title>Pull Requests - Learn Git</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Branching Strategy";
-        var mkdocs_page_input_path = "pages/course/branching-strategy.md";
+        var mkdocs_page_name = "Pull Requests";
+        var mkdocs_page_input_path = "pages/course/pull-requests.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -49,25 +49,13 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../install-git/">Installing Git</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Branching Strategy</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../branching-strategy/">Branching Strategy</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Pull Requests</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-master-branch">1. Master Branch</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-staging-branch">2. Staging Branch</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-dev-branch">3. Dev Branch</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-feature-branches">4. Feature Branches</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#recommended-workflow">Recommended Workflow</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#benefits-of-this-strategy">Benefits of This Strategy</a>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#reviewing">Reviewing</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pull-requests/">Pull Requests</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Quick Info</span></p>
@@ -100,7 +88,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Course</li>
-      <li class="breadcrumb-item active">Branching Strategy</li>
+      <li class="breadcrumb-item active">Pull Requests</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -109,84 +97,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="branching-strategy-guide">Branching Strategy Guide</h1>
-<p>When working on a team or even solo, it’s helpful to organize your code with branches so that development is safe, changes are tested, and releases are controlled. One common strategy uses <strong>three main branches</strong>:</p>
-<ol>
-<li><strong>Master (or Main) Branch</strong></li>
-<li><strong>Staging Branch</strong></li>
-<li><strong>Dev Branch</strong></li>
-</ol>
-<hr />
-<h2 id="1-master-branch"><strong>1. Master Branch</strong></h2>
+                <h1 id="pull-requests">Pull Requests</h1>
+<h2 id="reviewing">Reviewing</h2>
+<p>When merging pull requests into your repository, it is important to review the proposed changes before accepting them. A pull request review helps ensure that the code being added is correct, safe, and follows the standards of the project. It also helps prevent mistakes from being introduced into the main codebase.</p>
+<p>When reviewing a pull request, you should check the following:</p>
 <ul>
-<li><strong>Purpose:</strong> The “production-ready” branch. Only fully tested and stable code goes here.</li>
 <li>
-<p><strong>Usage:</strong></p>
-</li>
-<li>
-<p>No direct development on this branch.</p>
-</li>
-<li>Only merge code that has passed testing in Staging.</li>
-</ul>
-<hr />
-<h2 id="2-staging-branch"><strong>2. Staging Branch</strong></h2>
+<p><strong>The changes match what is intended</strong></p>
 <ul>
-<li><strong>Purpose:</strong> A testing branch that acts as a “preview” before code goes live.</li>
-<li>
-<p><strong>Usage:</strong></p>
-</li>
-<li>
-<p>Merge completed features from Dev here for testing.</p>
-</li>
-<li>QA or testing is performed on this branch.</li>
+<li>Review the files to ensure the pull request only contains the changes needed for the task and no accidental or unrelated edits.</li>
 </ul>
-<hr />
-<h2 id="3-dev-branch"><strong>3. Dev Branch</strong></h2>
+</li>
+<li>
+<p><strong>The changes are targeting the correct branch</strong></p>
 <ul>
-<li><strong>Purpose:</strong> The main branch for active development.</li>
-<li>
-<p><strong>Usage:</strong></p>
-</li>
-<li>
-<p>Developers create <strong>feature branches</strong> from Dev.</p>
-</li>
-<li>Merge completed features back into Dev when ready.</li>
+<li>Check that the pull request is being merged into the correct branch (such as main or develop) to avoid disrupting the workflow.</li>
 </ul>
-<hr />
-<h2 id="4-feature-branches"><strong>4. Feature Branches</strong></h2>
+</li>
+<li>
+<p><strong>The code meets team quality standards</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Isolate individual features or bug fixes.</li>
-<li>
-<p><strong>Usage:</strong></p>
-</li>
-<li>
-<p>Created from Dev.</p>
-</li>
-<li>Merged back into Dev when complete.</li>
+<li>Ensure the code follows the team’s coding standards, is readable, and avoids unnecessary complexity.</li>
 </ul>
-<hr />
-<h2 id="recommended-workflow"><strong>Recommended Workflow</strong></h2>
-<ol>
-<li><strong>Create feature branches</strong> from Dev.</li>
-<li><strong>Develop and commit</strong> in feature branches.</li>
-<li><strong>Merge feature branches into Dev</strong> when done.</li>
-<li><strong>Test Dev branch</strong>, then merge Dev into Staging for broader testing.</li>
-<li><strong>Test Staging</strong>, then merge Staging into Master for release.</li>
-</ol>
-<hr />
-<h3 id="benefits-of-this-strategy"><strong>Benefits of This Strategy</strong></h3>
+</li>
+<li>
+<p><strong>The changes do not introduce bugs</strong></p>
 <ul>
-<li>Keeps production stable.</li>
-<li>Encourages testing before release.</li>
-<li>Allows multiple developers to work in parallel safely.</li>
-<li>Clear separation of development, testing, and production code.</li>
+<li>Consider whether the update could break existing functionality and confirm the project still works as expected.</li>
 </ul>
+</li>
+<li>
+<p><strong>Documentation or comments are included if needed</strong></p>
+<ul>
+<li>Make sure any complex logic or new features are explained so other developers can understand and maintain the code.</li>
+</ul>
+</li>
+</ul>
+<p>Taking a few minutes to properly review a pull request helps maintain code quality, stability, and collaboration within the team. It also provides an opportunity to give constructive feedback and help other developers improve their work.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install-git/" class="btn btn-neutral float-left" title="Installing Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../pull-requests/" class="btn btn-neutral float-right" title="Pull Requests">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../branching-strategy/" class="btn btn-neutral float-left" title="Branching Strategy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../quick-info/cheat-sheet/" class="btn btn-neutral float-right" title="Git Cheatsheet">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -209,10 +162,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../install-git/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../branching-strategy/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../pull-requests/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../quick-info/cheat-sheet/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
