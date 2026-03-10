@@ -1,4 +1,5 @@
 site_name: Learn Git
+site_url: https://digital-initiatives-kangan-institute.github.io/learn-git/
 nav:
   - Home:
     - Introduction: index.md
