@@ -204,6 +204,13 @@
   cursor: default;
 }
 
+.qz-opt--selected {
+  border-color: var(--qz-accent);
+  background: #f0f3ff;
+  color: var(--qz-accent);
+  font-weight: 500;
+}
+
 .qz-opt--correct {
   border-color: var(--qz-correct-bdr) !important;
   background: var(--qz-correct-bg) !important;

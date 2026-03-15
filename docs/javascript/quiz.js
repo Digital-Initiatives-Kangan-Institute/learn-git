@@ -87,55 +87,69 @@
         </div>
 
         <div class="qz-footer">
-          <button class="qz-btn qz-btn--primary qz-js-next" disabled>
+          <button class="qz-btn qz-btn--ghost qz-js-submit" disabled>Submit Answer</button>
+          <button class="qz-btn qz-btn--primary qz-js-next qz-hidden">
             ${isLast ? 'See Results' : 'Next Question'}
           </button>
         </div>
       </div>`;
 
-    let answered = false;
+    let selected = null; // index of the currently selected option
 
+    const submitBtn = $('.qz-js-submit', el);
+    const nextBtn   = $('.qz-js-next', el);
+
+    // Clicking an option only selects it — no commitment yet
     $$('.qz-opt', el).forEach(btn => {
       btn.addEventListener('click', () => {
-        if (answered) return;
-        answered = true;
+        $$('.qz-opt', el).forEach(b => b.classList.remove('qz-opt--selected'));
+        btn.classList.add('qz-opt--selected');
+        selected = parseInt(btn.dataset.index, 10);
+        submitBtn.disabled = false;
+      });
+    });
 
-        const chosen = parseInt(btn.dataset.index, 10);
-        const isCorrect = chosen === q.correct;
+    // Submit locks in the answer and reveals feedback
+    submitBtn.addEventListener('click', () => {
+      if (selected === null) return;
 
-        // Lock and colour all options
-        $$('.qz-opt', el).forEach((b, i) => {
-          b.disabled = true;
-          if (i === q.correct) {
-            b.classList.add('qz-opt--correct');
-          }
-          if (i === chosen && !isCorrect) {
-            b.classList.add('qz-opt--wrong');
-          }
-        });
+      const chosen = selected;
+      const isCorrect = chosen === q.correct;
 
-        // Show the explanation feedback box
-        const feedback = $('.qz-feedback', el);
-        feedback.classList.remove('qz-hidden');
-        feedback.classList.add(isCorrect ? 'qz-feedback--correct' : 'qz-feedback--wrong');
-        feedback.innerHTML = `
-          <div class="qz-feedback-icon">${isCorrect ? '✓' : '✗'}</div>
-          <div class="qz-feedback-content">
-            <strong>${isCorrect ? 'Correct!' : 'Not quite — the correct answer is highlighted above.'}</strong>
-            <p>${esc(q.explanation)}</p>
-          </div>`;
+      // Lock all options and apply correct/wrong colours
+      $$('.qz-opt', el).forEach((b, i) => {
+        b.disabled = true;
+        b.classList.remove('qz-opt--selected');
+        if (i === q.correct) {
+          b.classList.add('qz-opt--correct');
+        }
+        if (i === chosen && !isCorrect) {
+          b.classList.add('qz-opt--wrong');
+        }
+      });
 
-        // Record answer and enable Next
-        const newAnswers = [...answers, chosen];
-        const nextBtn = $('.qz-js-next', el);
-        nextBtn.disabled = false;
-        nextBtn.addEventListener('click', () => {
-          if (index + 1 < total) {
-            renderQuestion(el, data, index + 1, newAnswers);
-          } else {
-            renderResults(el, data, newAnswers);
-          }
-        });
+      // Show the explanation feedback box
+      const feedback = $('.qz-feedback', el);
+      feedback.classList.remove('qz-hidden');
+      feedback.classList.add(isCorrect ? 'qz-feedback--correct' : 'qz-feedback--wrong');
+      feedback.innerHTML = `
+        <div class="qz-feedback-icon">${isCorrect ? '✓' : '✗'}</div>
+        <div class="qz-feedback-content">
+          <strong>${isCorrect ? 'Correct!' : 'Not quite — the correct answer is highlighted above.'}</strong>
+          <p>${esc(q.explanation)}</p>
+        </div>`;
+
+      // Swap Submit button out for Next button
+      submitBtn.classList.add('qz-hidden');
+      nextBtn.classList.remove('qz-hidden');
+
+      const newAnswers = [...answers, chosen];
+      nextBtn.addEventListener('click', () => {
+        if (index + 1 < total) {
+          renderQuestion(el, data, index + 1, newAnswers);
+        } else {
+          renderResults(el, data, newAnswers);
+        }
       });
     });
   }
