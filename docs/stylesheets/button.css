@@ -1,0 +1,20 @@
+.button {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+
+    color: white;
+    background-color: #526cfe;
+
+    padding: 0.75rem 1rem;
+
+    transition: filter 0.25s;
+
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+.button:hover {
+    filter: brightness(110%);
+}
+.button:active {
+    filter: brightness(95%);
+}

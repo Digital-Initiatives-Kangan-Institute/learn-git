@@ -1,0 +1,48 @@
+.alert {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+
+    color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.alert .title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.alert.alert-info {
+    background-color: #526cfe;
+}
+
+.alert.alert-warn {
+    background-color: #ffa22a;
+}
+
+.alert.alert-error {
+    background-color: #fe5252;
+}
+
+/* OVERRIDE MARKDOWN */
+.alert ul {
+    margin: 0 !important;
+}
+
+.alert code {
+    border: 0 !important;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.alert a {
+    color: white !important;
+    text-decoration: underline !important;
+    font-style: italic !important;
+}
