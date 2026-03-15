@@ -2,7 +2,7 @@ import re
 import markdown
 
 def on_page_markdown(markdown_text, **kwargs):
-    pattern = r":::(\w+)(?: ([^\n]+))?\n([\s\S]*?)\n:::"
+    pattern = r":!(\w+)(?: ([^\n]+))?\n([\s\S]*?)\n:::"
 
     def repl(match):
         type = match.group(1).strip()

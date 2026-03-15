@@ -1,7 +1,7 @@
 import re
 
 def on_page_markdown(markdown_text, **kwargs):
-    pattern = r"\$([^:]+):([a-zA-Z_]\w*\([^)]*\));"
+    pattern = r":\$([^:]+):([a-zA-Z_]\w*\([^)]*\));"
 
     def repl(match):
         text = match.group(1).strip()

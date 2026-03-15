@@ -2,17 +2,20 @@
 These are the custom controls/components that are added by mkdoc hooks.
 
 ## Button
-$Run Test:test();
+:$Run Test:test();
 
 ## Alerts
-:::info Info
+:!info Info
 - This is an info alert.
 :::
 
-:::warn Warning
+:!warn Warning
 - This is an warning alert.
 :::
 
-:::error Error
+:!error Error
 - This is an error alert.
 :::
+
+## Quiz
+:?quiz-1.json;
