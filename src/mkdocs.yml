@@ -21,6 +21,7 @@ hooks:
   - hooks/quiz.py
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/quiz.css
 extra_javascript:
   - javascript/main.js
   - javascript/quiz.js

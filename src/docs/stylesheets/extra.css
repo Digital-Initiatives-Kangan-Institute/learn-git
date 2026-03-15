@@ -79,11 +79,3 @@
 
     filter: grayscale(100%) brightness(200%) opacity(50%);
 }
-
-.quiz {
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-
-    padding: 1rem;
-    margin-bottom: 1rem;
-}

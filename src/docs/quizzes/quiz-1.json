@@ -1,3 +1,83 @@
 {
-    "title": "Test Quiz"
+  "title": "Science & Nature",
+  "description": "A casual knowledge check covering biology, chemistry, physics, and earth science. Take your time — there's no timer.",
+  "questions": [
+    {
+      "question": "What is the powerhouse of the cell?",
+      "options": [
+        "Nucleus",
+        "Ribosome",
+        "Mitochondria",
+        "Golgi apparatus"
+      ],
+      "correct": 2,
+      "explanation": "Mitochondria generate most of the cell's supply of ATP through a process called cellular respiration. They have their own DNA and are thought to have originated as free-living bacteria absorbed by a host cell billions of years ago."
+    },
+    {
+      "question": "Which planet in our solar system has the most confirmed moons?",
+      "options": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ],
+      "correct": 1,
+      "explanation": "As of 2024, Saturn leads with over 140 confirmed moons — more than any other planet. Many were discovered recently using advanced telescope surveys. Jupiter comes a close second with around 95."
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "options": [
+        "Go",
+        "Gd",
+        "Ag",
+        "Au"
+      ],
+      "correct": 3,
+      "explanation": "Gold's symbol 'Au' comes from its Latin name Aurum, inherited from ancient Roman usage. Alchemists assigned it the sun symbol ☉ and believed it to be the most perfect of metals. Ag (silver) comes from Argentum."
+    },
+    {
+      "question": "Approximately what percentage of Earth's atmosphere is nitrogen?",
+      "options": [
+        "21%",
+        "50%",
+        "78%",
+        "95%"
+      ],
+      "correct": 2,
+      "explanation": "Nitrogen (N₂) makes up about 78% of Earth's atmosphere. Oxygen accounts for roughly 21%, with the remaining 1% made up of argon, carbon dioxide, and trace gases. Despite its abundance, most living things cannot use atmospheric nitrogen directly."
+    },
+    {
+      "question": "What type of bond holds the two strands of a DNA double helix together?",
+      "options": [
+        "Ionic bonds",
+        "Covalent bonds",
+        "Hydrogen bonds",
+        "Metallic bonds"
+      ],
+      "correct": 2,
+      "explanation": "The two strands of DNA are held together by hydrogen bonds between complementary base pairs: adenine pairs with thymine, and cytosine pairs with guanine. Hydrogen bonds are weak individually, but millions of them together make the structure stable and also allow the strands to unzip during replication."
+    },
+    {
+      "question": "Which layer of the Earth is liquid?",
+      "options": [
+        "Inner core",
+        "Outer core",
+        "Lower mantle",
+        "Crust"
+      ],
+      "correct": 1,
+      "explanation": "The outer core is composed primarily of liquid iron and nickel and extends from about 2,900 km to 5,150 km below the surface. The movement of this liquid metal generates Earth's magnetic field through a dynamo effect. The inner core, by contrast, is solid despite being hotter."
+    },
+    {
+      "question": "What is the speed of light in a vacuum, approximately?",
+      "options": [
+        "300,000 km/s",
+        "150,000 km/s",
+        "30,000 km/s",
+        "3,000,000 km/s"
+      ],
+      "correct": 0,
+      "explanation": "Light travels at approximately 299,792 km/s in a vacuum — often rounded to 300,000 km/s. This constant, denoted as 'c', is fundamental to Einstein's theory of relativity. Light takes about 8 minutes and 20 seconds to travel from the Sun to Earth."
+    }
+  ]
 }

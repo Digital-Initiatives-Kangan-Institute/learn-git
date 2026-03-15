@@ -1,0 +1,419 @@
+/* ============================================================
+   quiz.css — MkDocs Material-inspired quiz styles
+   Link this in your <head> before quiz.js:
+     <link rel="stylesheet" href="quiz.css">
+   ============================================================ */
+
+/* ── Variables ──────────────────────────────────────────────── */
+
+.quiz {
+  /* Palette — matches MkDocs Material default light theme */
+  --qz-bg:           #ffffff;
+  --qz-surface:      #f8f9fa;
+  --qz-border:       #e0e0e0;
+  --qz-text:         #1a1a2e;
+  --qz-text-muted:   #5a5a72;
+  --qz-accent:       #526cfe;        /* Material primary blue */
+  --qz-accent-hover: #3a56e8;
+  --qz-correct:      #2e7d32;        /* green-800 */
+  --qz-correct-bg:   #e8f5e9;        /* green-50  */
+  --qz-correct-bdr:  #a5d6a7;        /* green-200 */
+  --qz-wrong:        #c62828;        /* red-800   */
+  --qz-wrong-bg:     #ffebee;        /* red-50    */
+  --qz-wrong-bdr:    #ef9a9a;        /* red-200   */
+  --qz-radius:       6px;
+  --qz-font:         'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --qz-font-mono:    'Roboto Mono', ui-monospace, monospace;
+
+  font-family: var(--qz-font);
+  color: var(--qz-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+
+.qz-card {
+  border: 1px solid var(--qz-border);
+  border-radius: var(--qz-radius);
+  background: var(--qz-bg);
+  overflow: hidden;
+  max-width: 680px;
+  margin: 1.5rem auto;
+}
+
+.qz-card--error {
+  padding: 1.5rem;
+}
+
+/* ── Header (question/results phase) ────────────────────────── */
+
+.qz-header {
+  background: var(--qz-surface);
+  border-bottom: 1px solid var(--qz-border);
+  padding: 0.75rem 1.25rem 0;
+}
+
+.qz-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  gap: 1rem;
+}
+
+.qz-header-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--qz-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qz-header-count {
+  font-size: 0.8rem;
+  color: var(--qz-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Progress bar ───────────────────────────────────────────── */
+
+.qz-progress-track {
+  height: 3px;
+  background: var(--qz-border);
+  margin: 0 -1.25rem; /* bleed to card edges */
+}
+
+.qz-progress-fill {
+  height: 100%;
+  background: var(--qz-accent);
+  transition: width 0.3s ease;
+}
+
+/* ── Start screen ───────────────────────────────────────────── */
+
+.qz-start-body {
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.qz-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--qz-accent);
+  margin: 0 0 0.4rem;
+}
+
+.qz-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  line-height: 1.3;
+  color: var(--qz-text);
+}
+
+.qz-desc {
+  color: var(--qz-text-muted);
+  margin: 0 0 1.2rem;
+}
+
+.qz-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.qz-chip {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--qz-surface);
+  border: 1px solid var(--qz-border);
+  color: var(--qz-text-muted);
+}
+
+.qz-chip--correct {
+  background: var(--qz-correct-bg);
+  border-color: var(--qz-correct-bdr);
+  color: var(--qz-correct);
+}
+
+.qz-chip--wrong {
+  background: var(--qz-wrong-bg);
+  border-color: var(--qz-wrong-bdr);
+  color: var(--qz-wrong);
+}
+
+.qz-start-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--qz-border);
+  background: var(--qz-surface);
+}
+
+/* ── Body (question / results) ──────────────────────────────── */
+
+.qz-body {
+  padding: 1.5rem 1.25rem;
+}
+
+/* ── Question text ──────────────────────────────────────────── */
+
+.qz-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--qz-text);
+  margin: 0 0 1.1rem;
+  line-height: 1.5;
+}
+
+/* ── Answer options ─────────────────────────────────────────── */
+
+.qz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.qz-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  background: var(--qz-bg);
+  border: 1px solid var(--qz-border);
+  border-radius: var(--qz-radius);
+  color: var(--qz-text);
+  font-family: var(--qz-font);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.qz-opt:hover:not(:disabled) {
+  border-color: var(--qz-accent);
+  background: #f0f3ff;
+}
+
+.qz-opt:disabled {
+  cursor: default;
+}
+
+.qz-opt--correct {
+  border-color: var(--qz-correct-bdr) !important;
+  background: var(--qz-correct-bg) !important;
+  color: var(--qz-correct) !important;
+  font-weight: 600;
+}
+
+.qz-opt--wrong {
+  border-color: var(--qz-wrong-bdr) !important;
+  background: var(--qz-wrong-bg) !important;
+  color: var(--qz-wrong) !important;
+}
+
+/* ── Feedback box ───────────────────────────────────────────── */
+
+.qz-feedback {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  border-radius: var(--qz-radius);
+  border: 1px solid transparent;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.qz-feedback p {
+  margin: 0.25rem 0 0;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.qz-feedback strong {
+  display: block;
+  font-weight: 600;
+}
+
+.qz-feedback--correct {
+  background: var(--qz-correct-bg);
+  border-color: var(--qz-correct-bdr);
+  color: var(--qz-correct);
+}
+
+.qz-feedback--wrong {
+  background: var(--qz-wrong-bg);
+  border-color: var(--qz-wrong-bdr);
+  color: var(--qz-wrong);
+}
+
+.qz-feedback-icon {
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.qz-feedback-content {
+  flex: 1;
+}
+
+.qz-hidden {
+  display: none !important;
+}
+
+/* ── Footer (Next / Retry buttons) ─────────────────────────── */
+
+.qz-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--qz-border);
+  background: var(--qz-surface);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+
+.qz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--qz-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--qz-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  text-decoration: none;
+}
+
+.qz-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.qz-btn--primary {
+  background: var(--qz-accent);
+  color: #fff;
+  border-color: var(--qz-accent);
+}
+
+.qz-btn--primary:not(:disabled):hover {
+  background: var(--qz-accent-hover);
+  border-color: var(--qz-accent-hover);
+}
+
+.qz-btn--ghost {
+  background: transparent;
+  color: var(--qz-text-muted);
+  border-color: var(--qz-border);
+}
+
+.qz-btn--ghost:hover {
+  color: var(--qz-text);
+  border-color: #aaa;
+}
+
+/* ── Results: score block ───────────────────────────────────── */
+
+.qz-score-block {
+  text-align: center;
+  padding: 0.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--qz-border);
+  margin-bottom: 1.25rem;
+}
+
+.qz-score-num {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 0.2rem;
+  color: var(--qz-text);
+}
+
+.qz-score-denom {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--qz-text-muted);
+}
+
+.qz-score-pct {
+  font-size: 0.9rem;
+  color: var(--qz-text-muted);
+  margin: 0 0 0.9rem;
+}
+
+/* ── Results: per-question list ─────────────────────────────── */
+
+.qz-result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.qz-result-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--qz-radius);
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+}
+
+.qz-result-row--correct {
+  background: var(--qz-correct-bg);
+  border-color: var(--qz-correct-bdr);
+  color: var(--qz-correct);
+}
+
+.qz-result-row--wrong {
+  background: var(--qz-wrong-bg);
+  border-color: var(--qz-wrong-bdr);
+  color: var(--qz-wrong);
+}
+
+.qz-result-icon {
+  flex-shrink: 0;
+  font-weight: 700;
+  margin-top: 0.05rem;
+}
+
+.qz-result-text {
+  line-height: 1.45;
+}
+
+/* ── Error state ────────────────────────────────────────────── */
+
+.qz-error-heading {
+  font-weight: 600;
+  color: var(--qz-wrong);
+  margin: 0 0 0.4rem;
+}
+
+.qz-error-file {
+  display: block;
+  font-family: var(--qz-font-mono);
+  font-size: 0.8rem;
+  background: var(--qz-surface);
+  border: 1px solid var(--qz-border);
+  border-radius: var(--qz-radius);
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--qz-text-muted);
+}
+
+.qz-error-msg {
+  font-size: 0.85rem;
+  color: var(--qz-text-muted);
+  margin: 0;
+}
