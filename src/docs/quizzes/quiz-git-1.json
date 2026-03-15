@@ -1,0 +1,116 @@
+{
+  "title": "Git Basics",
+  "description": "A beginner-friendly quiz covering the core concepts of Git — the world's most popular version control system.",
+  "questions": [
+    {
+      "question": "What does Git primarily help you do?",
+      "options": [
+        "Write code faster",
+        "Track changes to files over time",
+        "Deploy websites automatically",
+        "Compile and run programs"
+      ],
+      "correct": 1,
+      "explanation": "Git is a version control system — its main job is to track changes to your files over time. This means you can see what changed, when, and who changed it, and you can roll back to any earlier state of your project."
+    },
+    {
+      "question": "What command do you run to create a new Git repository in a folder?",
+      "options": [
+        "git start",
+        "git create",
+        "git init",
+        "git new"
+      ],
+      "correct": 2,
+      "explanation": "'git init' initialises a new Git repository in the current folder. It creates a hidden '.git' directory that stores all of Git's tracking data. You only need to run this once when setting up a project."
+    },
+    {
+      "question": "What is a 'commit' in Git?",
+      "options": [
+        "A copy of your entire hard drive",
+        "A saved snapshot of your staged changes",
+        "A message sent to your team",
+        "A branch of your project"
+      ],
+      "correct": 1,
+      "explanation": "A commit is a snapshot of your staged changes saved permanently into the repository's history. Every commit has a unique ID, a timestamp, an author, and a message describing what changed. Think of commits as save points in a video game."
+    },
+    {
+      "question": "Before you can commit a file, what must you do first?",
+      "options": [
+        "Push it to GitHub",
+        "Delete the old version",
+        "Stage it with 'git add'",
+        "Rename it"
+      ],
+      "correct": 2,
+      "explanation": "Git uses a two-step process: you first stage files with 'git add' to tell Git which changes you want to include, then you commit those staged changes. This lets you selectively include only certain files or changes in a single commit."
+    },
+    {
+      "question": "What does 'git status' show you?",
+      "options": [
+        "Your internet connection speed",
+        "The current state of your working directory and staging area",
+        "A list of all your commits",
+        "Who else is working on the project"
+      ],
+      "correct": 1,
+      "explanation": "'git status' gives you an overview of what's happening right now — which files have been modified, which are staged and ready to commit, and which are untracked (new files Git doesn't know about yet). It's one of the most useful commands to run regularly."
+    },
+    {
+      "question": "What is a branch in Git?",
+      "options": [
+        "A backup stored on a USB drive",
+        "An independent line of development",
+        "A deleted version of your project",
+        "A type of commit message"
+      ],
+      "correct": 1,
+      "explanation": "A branch is an independent line of development that lets you work on features or fixes in isolation, without affecting the main codebase. The default branch is usually called 'main' or 'master'. When your work is ready, you merge the branch back in."
+    },
+    {
+      "question": "What does 'git clone' do?",
+      "options": [
+        "Creates a duplicate file on your desktop",
+        "Copies a remote repository to your local machine",
+        "Makes a new branch",
+        "Reverts your last commit"
+      ],
+      "correct": 1,
+      "explanation": "'git clone' downloads a complete copy of a remote repository — including all its files, branches, and commit history — onto your local machine. It's typically the first command you run when joining an existing project."
+    },
+    {
+      "question": "What is the purpose of 'git pull'?",
+      "options": [
+        "Upload your changes to a remote repository",
+        "Delete a remote branch",
+        "Download and merge the latest changes from a remote repository",
+        "Switch to a different branch"
+      ],
+      "correct": 2,
+      "explanation": "'git pull' fetches the latest changes from the remote repository and automatically merges them into your current branch. It's the combination of 'git fetch' followed by 'git merge'. You'd run this to get a teammate's latest work onto your machine."
+    },
+    {
+      "question": "What does 'git push' do?",
+      "options": [
+        "Sends your local commits to a remote repository",
+        "Downloads changes from a remote repository",
+        "Stages all your files",
+        "Deletes your local commits"
+      ],
+      "correct": 0,
+      "explanation": "'git push' uploads your local commits to a remote repository (like GitHub or GitLab), making your changes available to others. You'll typically push after committing your work locally and wanting to share or back it up remotely."
+    },
+    {
+      "question": "What file can you create to tell Git to ignore certain files or folders?",
+      "options": [
+        ".gitconfig",
+        ".gitignore",
+        ".gitkeep",
+        ".gitskip"
+      ],
+      "correct": 1,
+      "explanation": "A '.gitignore' file lists patterns of files and folders that Git should not track — such as build output, log files, or files containing secrets like API keys. For example, adding 'node_modules/' to .gitignore prevents that large folder from being committed."
+    }
+  ]
+}

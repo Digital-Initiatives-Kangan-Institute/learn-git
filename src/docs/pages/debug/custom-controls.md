@@ -18,4 +18,4 @@ These are the custom controls/components that are added by mkdoc hooks.
 :::
 
 ## Quiz
-:?quiz-1.json;
+:?quiz-git-1.json;
