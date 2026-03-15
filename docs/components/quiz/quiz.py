@@ -17,6 +17,6 @@ def on_page_markdown(markdown_text, **kwargs):
     def repl(match):
         quiz = match.group(1).strip()
 
-        return f'<div class="quiz" file="{site_url}quizzes/{quiz}">Loading Quiz..</div>'
+        return f'<div class="quiz" file="{site_url}data/quizzes/{quiz}">Loading Quiz..</div>'
 
     return re.sub(pattern, repl, markdown_text, flags=re.DOTALL)

@@ -16,14 +16,14 @@ nav:
     - Custom Controls: pages/debug/custom-controls.md
 theme: readthedocs
 hooks:
-  - hooks/alert.py
-  - hooks/button.py
-  - hooks/quiz.py
+  - docs/components/alert/alert.py
+  - docs/components/button/button.py
+  - docs/components/quiz/quiz.py
 extra_css:
-  - stylesheets/alert.css
-  - stylesheets/button.css
-  - stylesheets/quiz.css
+  - components/alert/alert.css
+  - components/button/button.css
+  - components/quiz/quiz.css
   - stylesheets/extra.css
 extra_javascript:
-  - javascript/main.js
-  - javascript/quiz.js
+  - components/button/button.js
+  - components/quiz/quiz.js

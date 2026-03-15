@@ -14,13 +14,14 @@ A MkDocs hook scans your markdown files for the quiz shortcode syntax and replac
 
 ### 1. Create your quiz JSON file
 
-Place your quiz file inside the `src/docs/quizzes/` folder:
+Place your quiz file inside the `src/docs/data/quizzes/` folder:
 
 ```
 src/
 └── docs/
-    └── quizzes/
-        └── my-quiz.json
+    └── data/
+        └── quizzes/
+            └── my-quiz.json
 ```
 
 ### 2. Embed it in your markdown page
@@ -31,7 +32,7 @@ On any MkDocs page, add the shortcode on its own line:
 :?my-quiz.json;
 ```
 
-You only need the filename — not the full path. The hook knows to look inside `src/docs/quizzes/` automatically.
+You only need the filename — not the full path. The hook knows to look inside `src/docs/data/quizzes/` automatically.
 
 ---
 
