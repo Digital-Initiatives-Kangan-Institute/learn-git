@@ -19,15 +19,21 @@
 }
 
 .alert.alert-info {
-    background-color: #526cfe;
+    color: #286ac6;
+    border-color: #9cc7dd;
+    background-color: #ecf4fa;
 }
 
 .alert.alert-warn {
-    background-color: #ffa22a;
+    color: #c66228;
+    border-color: #ddb69c;
+    background-color: #faf0ec;
 }
 
 .alert.alert-error {
-    background-color: #fe5252;
+    color: #c62828;
+    border-color: #dd9e9c;
+    background-color: #faecee;
 }
 
 /* OVERRIDE MARKDOWN */
@@ -37,12 +43,14 @@
 
 .alert code {
     border: 0 !important;
+    border-radius: 5px;
+
     color: white !important;
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .alert a {
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
     text-decoration: underline !important;
     font-style: italic !important;
 }
